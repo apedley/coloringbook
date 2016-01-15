@@ -12,6 +12,7 @@ var MainView = React.createClass({
       </div>
     );
   }
+
 });
 
 module.exports = MainView;
