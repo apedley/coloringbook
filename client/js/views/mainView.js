@@ -1,5 +1,6 @@
 var React = require('react');
 var PhotoUpload = require('../components/photoUpload.js');
+var PhotoDisplay = require('../components/photoDisplay.js');
 
 var MainView = React.createClass({
   render: function() {
@@ -7,6 +8,7 @@ var MainView = React.createClass({
       <div className="root">
         <h3>Main View</h3>
         <PhotoUpload />
+        <PhotoDisplay />
       </div>
     );
   }

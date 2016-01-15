@@ -5,6 +5,7 @@ node_modules
 azure.err
 iisnode.yml
 coverage
+dist
 # Icon must ends with two \r.
 Icon
 

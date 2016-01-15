@@ -95,3 +95,5 @@ gulp.task('watch', function() {
   .pipe(gulp.dest(path.destJs));
 
 });
+
+gulp.task('default', ['watch']);

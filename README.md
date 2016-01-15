@@ -33,8 +33,8 @@ From within the root directory:
 npm install -g browserify
 npm install
 npm install -g grunt-cli
-grunt build
-grunt
+gulp build
+gulp
 ```
 
 Note that we will **not** be using bower for this project. Instead use npm to install any client dependencies and build them with browserify.
