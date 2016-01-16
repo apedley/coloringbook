@@ -4,7 +4,6 @@ var uglify = require('gulp-uglify');
 var react = require('gulp-react');
 var htmlreplace = require('gulp-html-replace');
 var watchify = require('watchify');
-var reactify = require('reactify');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var streamify = require('gulp-streamify');
@@ -30,12 +29,6 @@ var cssPath = {
   assetsDist: 'dist/assets'
 };
 
-gulp.task('transform', function() {
-  gulp.src(path.js)
-    .pipe(react())
-    .pipe(gulp.dest(path.destJs));
-});
-
 gulp.task('copy', function() {
   gulp.src(path.html)
     .pipe(gulp.dest(path.dest));
@@ -46,7 +39,6 @@ gulp.task('copy', function() {
 gulp.task('build', function() {
   browserify({
     entries: [path.entry],
-    transform: [reactify]
     // debug: true
   })
   .bundle()
@@ -74,7 +66,6 @@ gulp.task('watch', function() {
 
   var watcher = watchify(browserify({
     entries: [path.entry],
-    transform: [reactify],
     debug: true,
     cache: {},
     packageCache: {},
